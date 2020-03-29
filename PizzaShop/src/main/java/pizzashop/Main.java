@@ -53,7 +53,7 @@ public class Main extends Application {
                 }
                 else {
                     event.consume();
-asd
+
                 }
 
             }
