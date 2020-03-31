@@ -23,7 +23,7 @@ public class OrdersGUIController {
     @FXML
     private ComboBox<Integer> orderQuantity;
     @FXML
-    private TableView orderTable;
+    private TableView<MenuDataModel> orderTable;
     @FXML
     private TableColumn tableQuantity;
     @FXML
@@ -45,13 +45,13 @@ public class OrdersGUIController {
     @FXML
     private Button newOrder;
 
-    private   List<String> orderList = FXCollections.observableArrayList();
+    private List<String> orderList = FXCollections.observableArrayList();
     private List<Double> orderPaymentList = FXCollections.observableArrayList();
     public static double getTotalAmount() {
         return totalAmount;
     }
     public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
+        OrdersGUIController.totalAmount = totalAmount;
     }
 
     private PizzaService service;
@@ -59,7 +59,7 @@ public class OrdersGUIController {
 
     public ObservableList<String> observableList;
     private TableView<MenuDataModel> table = new TableView<MenuDataModel>();
-    private ObservableList<MenuDataModel> menuData;// = FXCollections.observableArrayList();
+    private ObservableList<MenuDataModel> menuData;
     private Calendar now = Calendar.getInstance();
     private static double totalAmount;
 

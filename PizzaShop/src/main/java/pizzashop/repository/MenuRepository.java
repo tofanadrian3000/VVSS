@@ -2,13 +2,16 @@ package pizzashop.repository;
 
 import pizzashop.model.MenuDataModel;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
 public class MenuRepository {
-    private static String filename = "data/menu.txt";
+    private final String menuFileName = "data/menu.txt";
     private List<MenuDataModel> listMenu;
 
     public MenuRepository(){
@@ -16,32 +19,44 @@ public class MenuRepository {
 
     private void readMenu(){
         ClassLoader classLoader = MenuRepository.class.getClassLoader();
-        File file = new File(classLoader.getResource(filename).getFile());
-        this.listMenu= new ArrayList();
-        BufferedReader br = null;
+        BufferedReader menuBufferReader = null;
+        this.listMenu= new ArrayList<>();
+        File menuFile = new File(classLoader.getResource(menuFileName).getFile());
+
         try {
-            br = new BufferedReader(new FileReader(file));
-            String line = null;
-            while((line=br.readLine())!=null){
-                MenuDataModel menuItem=getMenuItem(line);
-                listMenu.add(menuItem);
+            menuBufferReader = new BufferedReader(new FileReader(menuFile));
+            String currentLine;
+
+            while ((currentLine = menuBufferReader.readLine()) != null) {
+                MenuDataModel menuItem = this.getMenuItem(currentLine);
+                if (null != menuItem) {
+                    listMenu.add(menuItem);
+                }
             }
-            br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (null != menuBufferReader) {
+                try {
+                    menuBufferReader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+
     }
 
     private MenuDataModel getMenuItem(String line){
-        MenuDataModel item=null;
-        if (line==null|| line.equals("")) return null;
-        StringTokenizer st=new StringTokenizer(line, ",");
-        String name= st.nextToken();
-        double price = Double.parseDouble(st.nextToken());
-        item = new MenuDataModel(name, 0, price);
-        return item;
+        if (line==null|| line.equals("")) {
+            return null;
+        }
+        MenuDataModel newMenu;
+        StringTokenizer lineTokenizer=new StringTokenizer(line, ",");
+        String name= lineTokenizer.nextToken();
+        double price = Double.parseDouble(lineTokenizer.nextToken());
+        newMenu = new MenuDataModel(name, 0, price);
+        return newMenu;
     }
 
     public List<MenuDataModel> getMenu(){

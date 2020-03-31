@@ -23,16 +23,8 @@ public class MenuDataModel {
         return menuItem;
     }
 
-    public void setMenuItem(String menuItem) {
-        this.menuItem.set(menuItem);
-    }
-
     public Integer getQuantity() {
         return quantity.get();
-    }
-
-    public SimpleIntegerProperty quantityProperty() {
-        return quantity;
     }
 
     public void setQuantity(Integer quantity) {
@@ -43,11 +35,4 @@ public class MenuDataModel {
         return price.get();
     }
 
-    public SimpleDoubleProperty priceProperty() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price.set(price);
-    }
 }
