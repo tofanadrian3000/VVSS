@@ -58,9 +58,9 @@ public class PaymentAlert implements PaymentOperation {
                 return new Payment(tableNumber, PaymentType.Card, totalAmount);
             } else {
                 cancelPayment();
-                return null;
             }
         }
+        cancelPayment();
         return null;
     }
 }

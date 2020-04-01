@@ -134,7 +134,8 @@ public class OrdersGUIController {
         //bind pizzaTypeLabel and quantity combo box with the selection on the table view
         orderTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<MenuDataModel>() {
             @Override
-            public void changed(ObservableValue<? extends MenuDataModel> observable, MenuDataModel oldValue, MenuDataModel newValue) {
+            public void changed(ObservableValue<? extends MenuDataModel> observable,
+                                MenuDataModel oldValue, MenuDataModel newValue) {
                 MenuDataModel selectedOrder = orderTable.getSelectionModel().getSelectedItem();
                 if (null != selectedOrder) {
                     pizzaTypeLabel.textProperty().bind(selectedOrder.menuItemProperty());

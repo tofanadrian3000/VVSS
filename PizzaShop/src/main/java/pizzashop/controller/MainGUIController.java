@@ -44,7 +44,7 @@ public class MainGUIController  {
 
     PizzaService service;
 
-    public MainGUIController(){}
+    public MainGUIController(){ /*explanation*/  }
 
     public void setService(PizzaService service){
         this.service=service;
@@ -57,7 +57,8 @@ public class MainGUIController  {
             table1Orders.displayOrdersForm(service);
         });
         table2.setOnAction(event -> {
-            table2Orders.setTableNumber(2);
+            final int magicNumberTwo = 2;
+            table2Orders.setTableNumber(magicNumberTwo);
             table2Orders.displayOrdersForm(service);
         });
         table3.setOnAction(event -> {
