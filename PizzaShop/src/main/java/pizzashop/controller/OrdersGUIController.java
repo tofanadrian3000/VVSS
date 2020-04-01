@@ -25,11 +25,11 @@ public class OrdersGUIController {
     @FXML
     private TableView<MenuDataModel> orderTable;
     @FXML
-    private TableColumn tableQuantity;
+    private TableColumn<MenuDataModel, Integer> tableQuantity;
     @FXML
-    protected TableColumn tableMenuItem;
+    protected TableColumn<MenuDataModel, String> tableMenuItem;
     @FXML
-    private TableColumn tablePrice;
+    private TableColumn<MenuDataModel, Double> tablePrice;
     @FXML
     private Label pizzaTypeLabel;
     @FXML
@@ -47,11 +47,13 @@ public class OrdersGUIController {
 
     private List<String> orderList = FXCollections.observableArrayList();
     private List<Double> orderPaymentList = FXCollections.observableArrayList();
+
     public static double getTotalAmount() {
         return totalAmount;
     }
+
     public void setTotalAmount(double totalAmount) {
-        OrdersGUIController.totalAmount = totalAmount;
+        this.totalAmount = totalAmount;
     }
 
     private PizzaService service;
@@ -63,42 +65,44 @@ public class OrdersGUIController {
     private Calendar now = Calendar.getInstance();
     private static double totalAmount;
 
-    public OrdersGUIController(){ }
+    public OrdersGUIController() {
+    }
 
-    public void setService(PizzaService service, int tableNumber){
-        this.service=service;
-        this.tableNumber=tableNumber;
+    public void setService(PizzaService service, int tableNumber) {
+        this.service = service;
+        this.tableNumber = tableNumber;
         initData();
 
     }
 
-    private void initData(){
+    private void initData() {
         menuData = FXCollections.observableArrayList(service.getMenuData());
         menuData.setAll(service.getMenuData());
         orderTable.setItems(menuData);
 
         //Controller for Place Order Button
-        placeOrder.setOnAction(event ->{
-            orderList= menuData.stream()
-                    .filter(x -> x.getQuantity()>0)
-                    .map(menuDataModel -> menuDataModel.getQuantity() +" "+ menuDataModel.getMenuItem())
+        placeOrder.setOnAction(event -> {
+            orderList = menuData.stream()
+                    .filter(x -> x.getQuantity() > 0)
+                    .map(menuDataModel -> menuDataModel.getQuantity() + " " + menuDataModel.getMenuItem())
                     .collect(Collectors.toList());
             observableList = FXCollections.observableList(orderList);
-            KitchenGUIController.order.add("Table" + tableNumber +" "+ orderList.toString());
-            orderStatus.setText("Order placed at: " +  now.get(Calendar.HOUR)+":"+now.get(Calendar.MINUTE));
+            KitchenGUIController.order.add("Table" + tableNumber + " " + orderList.toString());
+            orderStatus.setText("Order placed at: " + now.get(Calendar.HOUR) + ":" + now.get(Calendar.MINUTE));
         });
 
         //Controller for Order Served Button
-        orderServed.setOnAction(event -> {orderStatus.setText("Served at: " + now.get(Calendar.HOUR)+":"+now.get(Calendar.MINUTE));
+        orderServed.setOnAction(event -> {
+            orderStatus.setText("Served at: " + now.get(Calendar.HOUR) + ":" + now.get(Calendar.MINUTE));
         });
 
         //Controller for Pay Order Button
         payOrder.setOnAction(event -> {
-            orderPaymentList= menuData.stream()
-                    .filter(x -> x.getQuantity()>0)
-                    .map(menuDataModel -> menuDataModel.getQuantity()*menuDataModel.getPrice())
+            orderPaymentList = menuData.stream()
+                    .filter(x -> x.getQuantity() > 0)
+                    .map(menuDataModel -> menuDataModel.getQuantity() * menuDataModel.getPrice())
                     .collect(Collectors.toList());
-            setTotalAmount(orderPaymentList.stream().mapToDouble(e->e.doubleValue()).sum());
+            setTotalAmount(orderPaymentList.stream().mapToDouble(e -> e.doubleValue()).sum());
             orderStatus.setText("Total amount: " + getTotalAmount());
             System.out.println("--------------------------");
             System.out.println("Table: " + tableNumber);
@@ -109,7 +113,7 @@ public class OrdersGUIController {
         });
     }
 
-    public void initialize(){
+    public void initialize() {
 
         //populate table view with menuData from OrderGUI
         table.setEditable(true);
@@ -122,36 +126,39 @@ public class OrdersGUIController {
 
         //bind pizzaTypeLabel and quantity combo box with the selection on the table view
         orderTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<MenuDataModel>() {
-        @Override
-        public void changed(ObservableValue<? extends MenuDataModel> observable, MenuDataModel oldValue, MenuDataModel newValue) {
-           pizzaTypeLabel.textProperty().bind(newValue.menuItemProperty());
-              }
+            @Override
+            public void changed(ObservableValue<? extends MenuDataModel> observable, MenuDataModel oldValue, MenuDataModel newValue) {
+                MenuDataModel selectedOrder = orderTable.getSelectionModel().getSelectedItem();
+                if (null != selectedOrder) {
+                    pizzaTypeLabel.textProperty().bind(selectedOrder.menuItemProperty());
+                }
+
+            }
         });
 
         //Populate Combo box for Quantity
-        ObservableList<Integer> quantityValues =  FXCollections.observableArrayList(0, 1, 2,3,4,5);
+        ObservableList<Integer> quantityValues = FXCollections.observableArrayList(0, 1, 2, 3, 4, 5);
         orderQuantity.getItems().addAll(quantityValues);
         orderQuantity.setPromptText("Quantity");
 
         //Controller for Add to order Button
         addToOrder.setOnAction(event -> {
-            orderTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<MenuDataModel>(){
-            @Override
-            public void changed(ObservableValue<? extends MenuDataModel> observable, MenuDataModel oldValue, MenuDataModel newValue){
-            oldValue.setQuantity(orderQuantity.getValue());
-            orderTable.getSelectionModel().selectedItemProperty().removeListener(this);
-                }
-            });
+            MenuDataModel selectedOrder = orderTable.getSelectionModel().getSelectedItem();
+            if (null != selectedOrder) {
+                selectedOrder.setQuantity(orderQuantity.getValue());
+                int index = menuData.indexOf(selectedOrder);
+                menuData.set(index, selectedOrder);
+            }
         });
 
         //Controller for Exit table Button
         newOrder.setOnAction(event -> {
-            Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Exit table?",ButtonType.YES, ButtonType.NO);
+            Alert exitAlert = new Alert(Alert.AlertType.CONFIRMATION, "Exit table?", ButtonType.YES, ButtonType.NO);
             Optional<ButtonType> result = exitAlert.showAndWait();
-            if (result.get() == ButtonType.YES){
+            if (result.get() == ButtonType.YES) {
                 Stage stage = (Stage) newOrder.getScene().getWindow();
                 stage.close();
-                }
+            }
         });
     }
 }

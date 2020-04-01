@@ -11,3 +11,7 @@
 1,Card,74.0
 1,Cash,73.0
 1,Cash,0.0
+1,Card,0.0
+8,Cash,0.0
+1,Card,38.5
+1,Cash,23.5
