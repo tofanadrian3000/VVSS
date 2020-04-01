@@ -1,17 +1,18 @@
-package pizzashop.service;
+package pizzashop.gui;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
+import pizzashop.service.PaymentOperation;
+import pizzashop.service.PizzaService;
 
 import java.util.Optional;
 
 public class PaymentAlert implements PaymentOperation {
-    private PizzaService service;
 
-    public PaymentAlert(PizzaService service){
-        this.service=service;
-    }
+
+    public PaymentAlert(){ }
 
     @Override
     public void cardPayment() {
@@ -36,7 +37,7 @@ public class PaymentAlert implements PaymentOperation {
         System.out.println("--------------------------");
     }
 
-    public void showPaymentAlert(int tableNumber, double totalAmount ) {
+    public Payment showPaymentAlert(int tableNumber, double totalAmount ) {
         Alert paymentAlert = new Alert(Alert.AlertType.CONFIRMATION);
         ButtonType cardPayment = new ButtonType("Pay by Card");
         ButtonType cashPayment = new ButtonType("Pay Cash");
@@ -51,15 +52,15 @@ public class PaymentAlert implements PaymentOperation {
         if(result.isPresent()) {
             if (result.get() == cardPayment) {
                 cardPayment();
-                service.addPayment(tableNumber, PaymentType.Card, totalAmount);
+                return new Payment(tableNumber, PaymentType.Card, totalAmount);
             } else if (result.get() == cashPayment) {
                 cashPayment();
-                service.addPayment(tableNumber, PaymentType.Cash, totalAmount);
-            } else if (result.get() == cancel) {
-                cancelPayment();
+                return new Payment(tableNumber, PaymentType.Card, totalAmount);
             } else {
                 cancelPayment();
+                return null;
             }
         }
+        return null;
     }
 }

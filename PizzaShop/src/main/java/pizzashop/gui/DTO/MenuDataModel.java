@@ -1,4 +1,4 @@
-package pizzashop.model;
+package pizzashop.gui.DTO;
 
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;

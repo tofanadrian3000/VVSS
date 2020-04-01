@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64e55e73-377b-4426-84b2-dfc8aff95aa3" name="Default Changelist" comment="" />
+    <list default="true" id="64e55e73-377b-4426-84b2-dfc8aff95aa3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pizzashop/model/MenuData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pizzashop/controller/OrdersGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pizzashop/controller/OrdersGUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pizzashop/model/MenuDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pizzashop/gui/DTO/MenuDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pizzashop/repository/MenuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pizzashop/repository/MenuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pizzashop/service/PaymentAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pizzashop/gui/PaymentAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pizzashop/service/PizzaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pizzashop/service/PizzaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data/payments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/payments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pizzashop/controller/OrdersGUIController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pizzashop/controller/OrdersGUIController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pizzashop/controller/OrdersGUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pizzashop/controller/OrdersGUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pizzashop/model/MenuDataModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pizzashop/repository/MenuRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pizzashop/repository/MenuRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pizzashop/service/PaymentAlert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pizzashop/service/PizzaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pizzashop/service/PizzaService.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,20 +30,22 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="13" />
+          <entry key="JAVA" value="16" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="UML" value="4" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="264" />
         </counts>
       </usages-collector>
     </session>
@@ -36,10 +53,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/model/MenuDataModel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/model/MenuData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+            <state relative-caret-position="374">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,75 +65,114 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/model/Payment.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/repository/MenuRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/gui/OrdersGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+            <state relative-caret-position="272">
+              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/service/PaymentAlert.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/controller/KitchenGUIController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/controller/MainGUIController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/gui/PaymentAlert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="55" column="53" lean-forward="true" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/gui/DTO/MenuDataModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/controller/OrdersGUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="140" column="56" lean-forward="true" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
+            <state relative-caret-position="664">
+              <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1452#1453#0" expanded="true" />
                 <element signature="e#1486#1487#0" expanded="true" />
                 <element signature="e#1540#1541#0" expanded="true" />
                 <element signature="e#1586#1587#0" expanded="true" />
-                <element signature="e#1761#1776#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/gui/KitchenGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <entry file="uml://JAVA/pizzashop">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>pizzashop</OriginalElement>
+              <nodes>
+                <node x="888.0" y="902.0">pizzashop.gui.OrdersGUI</node>
+                <node x="649.0" y="145.0">pizzashop.gui.PaymentAlert</node>
+                <node x="214.0" y="1111.0">pizzashop.model.PaymentType</node>
+                <node x="687.0" y="0.0">pizzashop.service.PaymentOperation</node>
+                <node x="0.0" y="649.0">pizzashop.gui.DTO.MenuDataModel</node>
+                <node x="954.0" y="0.0">pizzashop.controller.KitchenGUIController</node>
+                <node x="337.0" y="649.0">pizzashop.service.PizzaService</node>
+                <node x="721.0" y="649.0">pizzashop.repository.PaymentRepository</node>
+                <node x="0.0" y="0.0">pizzashop.controller.OrdersGUIController</node>
+                <node x="590.0" y="902.0">pizzashop.model.MenuData</node>
+                <node x="379.0" y="1111.0">pizzashop.gui.KitchenGUI</node>
+                <node x="283.0" y="902.0">pizzashop.model.Payment</node>
+                <node x="411.0" y="0.0">pizzashop.controller.MainGUIController</node>
+                <node x="0.0" y="902.0">pizzashop.repository.MenuRepository</node>
+                <node x="0.0" y="1111.0">pizzashop.Main</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="pizzashop.gui.PaymentAlert" target="pizzashop.service.PaymentOperation">
+                  <point x="0.0" y="-81.5" />
+                  <point x="0.0" y="47.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.1" x="-0.8181818181818414" y="25.18181818181816" />
+              <SelectedNodes>
+                <node>pizzashop.gui.OrdersGUI</node>
+                <node>pizzashop.gui.PaymentAlert</node>
+                <node>pizzashop.model.PaymentType</node>
+                <node>pizzashop.service.PaymentOperation</node>
+                <node>pizzashop.gui.DTO.MenuDataModel</node>
+                <node>pizzashop.controller.KitchenGUIController</node>
+                <node>pizzashop.service.PizzaService</node>
+                <node>pizzashop.repository.PaymentRepository</node>
+                <node>pizzashop.controller.OrdersGUIController</node>
+                <node>pizzashop.model.MenuData</node>
+                <node>pizzashop.gui.KitchenGUI</node>
+                <node>pizzashop.model.Payment</node>
+                <node>pizzashop.controller.MainGUIController</node>
+                <node>pizzashop.repository.MenuRepository</node>
+                <node>pizzashop.Main</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -124,8 +180,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/service/PizzaService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,9 +202,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>service</find>
       <find>obser</find>
       <find>observ</find>
+      <find>MenuDataModel</find>
+      <find>service</find>
+      <find>show</find>
+      <find>ale</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,7 +217,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/pizzashop/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pizzashop/controller/MenuDataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pizzashop/model/MenuDataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pizzashop/model/MenuData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pizzashop/repository/MenuRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pizzashop/gui/DTO/MenuDataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pizzashop/service/PizzaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pizzashop/controller/OrdersGUIController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pizzashop/gui/PaymentAlert.java" />
       </list>
     </option>
   </component>
@@ -187,7 +256,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1322" />
+    <option name="x" value="1185" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1056" />
@@ -198,8 +267,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -263,6 +332,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pizzashop" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="DTO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PizzaShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PizzaShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pizzashop" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -307,9 +386,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585522910100" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585761578482" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pizzashop.controller" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -385,16 +469,18 @@
       <updated>1585517362347</updated>
       <workItem from="1585517366711" duration="3097000" />
       <workItem from="1585691989273" duration="5570000" />
+      <workItem from="1585759858775" duration="1711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8671000" />
+    <option name="totallyTimeSpent" value="10382000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15724947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15858506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -403,7 +489,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33073324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -444,13 +530,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/data/payments.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/service/PaymentOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/model/Payment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -458,44 +537,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/repository/MenuRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/gui/OrdersGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="306">
           <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/model/MenuDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/service/PaymentAlert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/service/PizzaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -520,17 +568,166 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/service/PaymentOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/model/MenuData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/repository/MenuRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/gui/DTO/MenuDataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/service/PizzaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/ad/Documents/VVSS/PizzaShop;C:/Users/ad/Documents/VVSS/PizzaShop/.idea;C:/Users/ad/Documents/VVSS/PizzaShop/Docs;C:/Users/ad/Documents/VVSS/PizzaShop/src;C:/Users/ad/Documents/VVSS/PizzaShop/src/main;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/controller;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/gui;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/gui/DTO;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/model;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/repository;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/service;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/resources;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/resources/data;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/resources/fxml;C:/Users/ad/Documents/VVSS/PizzaShop/src/test;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/../PizzaShop;C:/Users/ad/Documents/VVSS/PizzaShop/.idea;C:/Users/ad/Documents/VVSS/PizzaShop/Docs;C:/Users/ad/Documents/VVSS/PizzaShop/src;C:/Users/ad/Documents/VVSS/PizzaShop/src/main;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/controller;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/gui;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/gui/DTO;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/model;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/repository;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/service;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/resources;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/resources/data;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/resources/fxml;C:/Users/ad/Documents/VVSS/PizzaShop/src/test;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/service;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/controller;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/gui;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/model;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/repository;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/pizzashop/service;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/controller;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/gui;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/model;C:/Users/ad/Documents/VVSS/PizzaShop/src/main/java/pizzashop/repository;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="1058.5" y="404.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/pizzashop">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pizzashop</OriginalElement>
+          <nodes>
+            <node x="888.0" y="902.0">pizzashop.gui.OrdersGUI</node>
+            <node x="649.0" y="145.0">pizzashop.gui.PaymentAlert</node>
+            <node x="214.0" y="1111.0">pizzashop.model.PaymentType</node>
+            <node x="687.0" y="0.0">pizzashop.service.PaymentOperation</node>
+            <node x="0.0" y="649.0">pizzashop.gui.DTO.MenuDataModel</node>
+            <node x="954.0" y="0.0">pizzashop.controller.KitchenGUIController</node>
+            <node x="337.0" y="649.0">pizzashop.service.PizzaService</node>
+            <node x="721.0" y="649.0">pizzashop.repository.PaymentRepository</node>
+            <node x="0.0" y="0.0">pizzashop.controller.OrdersGUIController</node>
+            <node x="590.0" y="902.0">pizzashop.model.MenuData</node>
+            <node x="379.0" y="1111.0">pizzashop.gui.KitchenGUI</node>
+            <node x="283.0" y="902.0">pizzashop.model.Payment</node>
+            <node x="411.0" y="0.0">pizzashop.controller.MainGUIController</node>
+            <node x="0.0" y="902.0">pizzashop.repository.MenuRepository</node>
+            <node x="0.0" y="1111.0">pizzashop.Main</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="pizzashop.gui.PaymentAlert" target="pizzashop.service.PaymentOperation">
+              <point x="0.0" y="-81.5" />
+              <point x="0.0" y="47.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.1" x="-0.8181818181818414" y="25.18181818181816" />
+          <SelectedNodes>
+            <node>pizzashop.gui.OrdersGUI</node>
+            <node>pizzashop.gui.PaymentAlert</node>
+            <node>pizzashop.model.PaymentType</node>
+            <node>pizzashop.service.PaymentOperation</node>
+            <node>pizzashop.gui.DTO.MenuDataModel</node>
+            <node>pizzashop.controller.KitchenGUIController</node>
+            <node>pizzashop.service.PizzaService</node>
+            <node>pizzashop.repository.PaymentRepository</node>
+            <node>pizzashop.controller.OrdersGUIController</node>
+            <node>pizzashop.model.MenuData</node>
+            <node>pizzashop.gui.KitchenGUI</node>
+            <node>pizzashop.model.Payment</node>
+            <node>pizzashop.controller.MainGUIController</node>
+            <node>pizzashop.repository.MenuRepository</node>
+            <node>pizzashop.Main</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/controller/OrdersGUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="140" column="56" lean-forward="true" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
+        <state relative-caret-position="664">
+          <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1452#1453#0" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1540#1541#0" expanded="true" />
             <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1761#1776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pizzashop/gui/PaymentAlert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="55" column="53" lean-forward="true" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

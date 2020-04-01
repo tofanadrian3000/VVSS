@@ -8,11 +8,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import pizzashop.model.MenuDataModel;
-import pizzashop.gui.OrdersGUI;
-import pizzashop.service.PaymentAlert;
+import pizzashop.gui.DTO.MenuDataModel;
+import pizzashop.gui.PaymentAlert;
+import pizzashop.model.Payment;
 import pizzashop.service.PizzaService;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
@@ -76,8 +77,11 @@ public class OrdersGUIController {
     }
 
     private void initData() {
-        menuData = FXCollections.observableArrayList(service.getMenuData());
-        menuData.setAll(service.getMenuData());
+        List<MenuDataModel> menuDataModelList = new ArrayList<>();
+        service.getMenuData().forEach(x->menuDataModelList.add(new MenuDataModel(x.getMenuItem(),
+                x.getQuantity(), x.getPrice())));
+        menuData = FXCollections.observableArrayList(menuDataModelList);
+        menuData.setAll(menuDataModelList);
         orderTable.setItems(menuData);
 
         //Controller for Place Order Button
@@ -108,8 +112,11 @@ public class OrdersGUIController {
             System.out.println("Table: " + tableNumber);
             System.out.println("Total: " + getTotalAmount());
             System.out.println("--------------------------");
-            PaymentAlert pay = new PaymentAlert(service);
-            pay.showPaymentAlert(tableNumber, this.getTotalAmount());
+            PaymentAlert pay = new PaymentAlert();
+            Payment payment = pay.showPaymentAlert(tableNumber, this.getTotalAmount());
+            if(payment != null){
+                service.addPayment(tableNumber, payment.getType(), payment.getAmount());
+            }
         });
     }
 
