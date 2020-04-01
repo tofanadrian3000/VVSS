@@ -1,10 +1,8 @@
+
 package pizzashop.model;
 
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 public class MenuData {
+
     private String menuItem;
     private Integer quantity;
     private Double price;
