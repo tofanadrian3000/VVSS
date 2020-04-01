@@ -3,36 +3,28 @@ package pizzashop.gui.DTO;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import pizzashop.model.MenuData;
 
-public class MenuDataModel {
-    private final SimpleStringProperty menuItem;
-    private final SimpleIntegerProperty quantity;
-    private final SimpleDoubleProperty price;
+public class MenuDataModel{
+
+    private MenuData menuData;
 
     public MenuDataModel(String mItem, Integer mQuantity, Double mPrice) {
-        this.menuItem = new SimpleStringProperty(mItem);
-        this.quantity = new SimpleIntegerProperty(mQuantity);
-        this.price = new SimpleDoubleProperty(mPrice);
+        this.menuData = new MenuData(mItem, mQuantity, mPrice);
     }
 
-    public String getMenuItem() {
-        return menuItem.get();
-    }
+    public String getMenuItem() { return menuData.getMenuItem(); }
 
-    public SimpleStringProperty menuItemProperty() {
-        return menuItem;
-    }
+    public SimpleStringProperty menuItemProperty() { return new SimpleStringProperty(menuData.getMenuItem()); }
 
-    public Integer getQuantity() {
-        return quantity.get();
-    }
+    public Integer getQuantity() { return menuData.getQuantity(); }
 
     public void setQuantity(Integer quantity) {
-        this.quantity.set(quantity);
+        menuData.setQuantity(quantity);
     }
 
     public Double getPrice() {
-        return price.get();
+        return menuData.getPrice();
     }
 
 }
