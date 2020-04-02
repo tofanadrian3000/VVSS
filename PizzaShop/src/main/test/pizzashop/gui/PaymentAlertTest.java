@@ -48,8 +48,8 @@ class PaymentAlertTest {
         WaitForAsyncUtils.waitForFxEvents();
         robot.clickOn("Pay " + (str.equals("Card") ? "by ":"") + str);
 
-        assertEquals(payment.getTableNumber(), 5);
-        assertEquals(payment.getAmount(), 25.5);
+        assertEquals(5, payment.getTableNumber());
+        assertEquals(25.5, payment.getAmount());
         assertEquals(payment.getType(), PaymentType.valueOf(str));
 
     }
@@ -99,9 +99,9 @@ class PaymentAlertTest {
         WaitForAsyncUtils.waitForFxEvents();
         robot.clickOn("Pay by Card");
 
-        assertEquals(payment.getTableNumber(), tableNumber);
-        assertEquals(payment.getAmount(), 0.0001);
-        assertEquals(payment.getType(), PaymentType.Card);
+        assertEquals(tableNumber, payment.getTableNumber());
+        assertEquals(0.0001, payment.getAmount());
+        assertEquals(PaymentType.Card, payment.getType());
 
     }
     @ParameterizedTest
@@ -127,9 +127,9 @@ class PaymentAlertTest {
         WaitForAsyncUtils.waitForFxEvents();
         robot.clickOn("Pay Cash");
 
-        assertEquals(payment.getTableNumber(), 1);
-        assertEquals(payment.getAmount(), totalAmount);
-        assertEquals(payment.getType(), PaymentType.Cash);
+        assertEquals(1, payment.getTableNumber());
+        assertEquals(totalAmount, payment.getAmount());
+        assertEquals(PaymentType.Cash, payment.getType());
     }
     @ParameterizedTest
     @ValueSource(doubles = {-0.0001, 0, -1})
