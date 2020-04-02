@@ -13,7 +13,9 @@ public class Payment {
         this.type = type;
         this.amount = amount;
     }
-
+    public int getTableNumber() {
+        return tableNumber;
+    }
     public PaymentType getType() {
         return type;
     }

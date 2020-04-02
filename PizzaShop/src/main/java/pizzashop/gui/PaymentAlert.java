@@ -38,6 +38,14 @@ public class PaymentAlert implements PaymentOperation {
     }
 
     public Payment showPaymentAlert(int tableNumber, double totalAmount ) {
+        if(tableNumber < 1 || tableNumber > 8) {
+            cancelPayment();
+            return null;
+        }
+        if(totalAmount<=0) {
+            cancelPayment();
+            return null;
+        }
         Alert paymentAlert = new Alert(Alert.AlertType.CONFIRMATION);
         ButtonType cardPayment = new ButtonType("Pay by Card");
         ButtonType cashPayment = new ButtonType("Pay Cash");
@@ -55,7 +63,7 @@ public class PaymentAlert implements PaymentOperation {
                 return new Payment(tableNumber, PaymentType.Card, totalAmount);
             } else if (result.get() == cashPayment) {
                 cashPayment();
-                return new Payment(tableNumber, PaymentType.Card, totalAmount);
+                return new Payment(tableNumber, PaymentType.Cash, totalAmount);
             } else {
                 cancelPayment();
             }
