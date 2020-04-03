@@ -12,43 +12,73 @@
 <p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
 <div class="doc_title"><p>Test Specification</p></div>
 <div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj237<br>Test Suite: Prj237 - viir2422_BBT</p></div>
-<div class="summary"><p id="printedby">Printed by TestLink on 02/04/2020</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 03/04/2020</p></div>
 <div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
-<h1 class="doclevel" >Scope</h1>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><b><p style="padding-left: 20px;"><a href="#toc_1">1. viir2422_BBT</a></p></b>
+<p style="padding-left: 45px;"><a href="#toc_tc42572">Prj237-33: F01_ECP_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc42574">Prj237-34: F01_ECP_Invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc42576">Prj237-35: F01_BVA_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc42578">Prj237-36: F01_BVA_Invalid</a></p></div><h1 class="doclevel" >Scope</h1>
 <div class="txtlevel"><p>
 	Testing project for group 237</p></div>
- <br/><h1 class='doclevel'>Test Suite : viir2422_BBT</h1>
-<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-33: F01_ECP_Valid</th></tr>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1. Test Suite : viir2422_BBT</h1>
+<a name="toc_tc42572"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-33: F01_ECP_Valid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">viir2422</td></tr>
 <tr><td colspan="3"><span class="label">Summary:</span><br /><p>
 	Testing for valid totalAmount</p>
+</td></tr><tr><td colspan="3"><span class="label">Preconditions:</span><br /><p>
+	totalAmount &gt; 0</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr></table>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" ></td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">vrir2424_F01:  Requirement_Operation_F01<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
 </div>
-<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-34: F01_ECP_Invalid</th></tr>
+<a name="toc_tc42574"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-34: F01_ECP_Invalid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">viir2422</td></tr>
 <tr><td colspan="3"><span class="label">Summary:</span><br /><p>
 	Testing for invalid totalAmount</p>
+</td></tr><tr><td colspan="3"><span class="label">Preconditions:</span><br /><p>
+	totalAmount &lt;= 0</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr></table>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" ></td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">vrir2424_F01:  Requirement_Operation_F01<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
 </div>
-<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-35: F01_BVA_Valid</th></tr>
+<a name="toc_tc42576"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-35: F01_BVA_Valid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">viir2422</td></tr>
 <tr><td colspan="3"><span class="label">Summary:</span><br /><p>
 	Testing for valid tableNumber limit</p>
+</td></tr><tr><td colspan="3"><span class="label">Preconditions:</span><br /><p>
+	tableNumber = 8</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr></table>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" ></td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">vrir2424_F01:  Requirement_Operation_F01<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
 </div>
-<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-36: F01_BVA_Invalid</th></tr>
+<a name="toc_tc42578"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj237-36: F01_BVA_Invalid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">viir2422</td></tr>
 <tr><td colspan="3"><span class="label">Summary:</span><br /><p>
 	Testing for invalid tableNumber limit</p>
+</td></tr><tr><td colspan="3"><span class="label">Preconditions:</span><br /><p>
+	tableNumber = 0</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
-<tr><td colspan="3"></td></tr></table>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" ></td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">vrir2424_F01:  Requirement_Operation_F01<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
 </div>
 
 </body>
