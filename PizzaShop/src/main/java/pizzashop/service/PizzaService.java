@@ -30,7 +30,10 @@ public class PizzaService {
     public double getTotalAmount(PaymentType type){
         double total = 0.0;
         List<Payment> paymentList = getPayments();
-        if ((paymentList == null) ||(paymentList.size() == 0)) {
+        if ((paymentList == null)) {
+            return total;
+        }
+        if(paymentList.size() == 0) {
             return total;
         }
         for (Payment payment:paymentList){
@@ -38,7 +41,10 @@ public class PizzaService {
                 total += payment.getAmount();
             }
         }
-        return total;
+        if(total > 0) {
+             return total;
+        }
+        return  0;
     }
 
 }
