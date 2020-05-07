@@ -180,7 +180,12 @@
         </configuration>
       </plugin>
     </plugins>
-
+    <testResources>
+      <testResource>
+        <directory>src/main/test/resources</directory>
+        <filtering>true</filtering>
+      </testResource>
+    </testResources>
   </build>
 
   <pluginRepositories>
