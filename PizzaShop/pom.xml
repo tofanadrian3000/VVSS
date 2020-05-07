@@ -183,6 +183,11 @@
         </configuration>
       </plugin>
     </plugins>
+    <testResources>
+      <testResource>
+        <directory>${project.basedir}/src/main/test/resources</directory>
+      </testResource>
+    </testResources>
   </build>
 
   <pluginRepositories>
