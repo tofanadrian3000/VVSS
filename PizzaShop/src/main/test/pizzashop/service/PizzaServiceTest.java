@@ -1,17 +1,13 @@
 package pizzashop.service;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pizzashop.model.Payment;
 import pizzashop.model.PaymentType;
-import pizzashop.repository.MenuRepository;
 import pizzashop.repository.PaymentRepository;
 
 import java.util.ArrayList;
-import java.util.function.Consumer;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
 class PizzaServiceTest {
@@ -64,5 +60,19 @@ class PizzaServiceTest {
         PizzaService service = new PizzaService(null, paymentRepoMock);
 
         assertEquals(0, service.getTotalAmount(PaymentType.Card));
+    }
+
+    @Test
+    void ifPaymentIsAddedItCanBeRetrieved() {
+        PaymentRepository paymentRepoMock = mock(PaymentRepository.class);
+        ArrayList<Payment> payments = new ArrayList<>();
+        payments.add(new Payment(2, PaymentType.Card, 20));
+        when(paymentRepoMock.getAll()).thenReturn(payments);
+        PizzaService service = new PizzaService(null, paymentRepoMock);
+
+        service.addPayment(2, PaymentType.Card, 20);
+
+        assertEquals(2, service.getPayments().get(0).getTableNumber());
+
     }
 }
